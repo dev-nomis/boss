@@ -84,19 +84,37 @@ $(document).ready(function () {
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: new URLSearchParams(formData).toString(),
+    // })
+    //   .then(() => {
+    //     resetData();
+    //     $modal2.removeClass("active");
+    //     $modal3.removeClass("active");
+    //     $modal.addClass("active");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    //
+    $.post(
+      "https://submit-form.com/N6QEhVAT",
+      {
+        Info: new URLSearchParams(formData).toString(),
+      },
+      null,
+      "json" // dataType must be set to json
+    )
+      .then(function () {
         resetData();
         $modal2.removeClass("active");
         $modal3.removeClass("active");
         $modal.addClass("active");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(function (response) {
+        console.error(response);
       });
   });
 
@@ -110,19 +128,37 @@ $(document).ready(function () {
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: new URLSearchParams(formData).toString(),
+    // })
+    //   .then(() => {
+    //     resetData();
+    //     $modal2.removeClass("active");
+    //     $modal3.removeClass("active");
+    //     $modal.addClass("active");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    //
+    $.post(
+      "https://submit-form.com/N6QEhVAT",
+      {
+        Info: new URLSearchParams(formData).toString(),
+      },
+      null,
+      "json" // dataType must be set to json
+    )
+      .then(function () {
         resetData();
         $modal2.removeClass("active");
         $modal3.removeClass("active");
         $modal.addClass("active");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(function (response) {
+        console.error(response);
       });
   });
 
@@ -136,19 +172,37 @@ $(document).ready(function () {
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: new URLSearchParams(formData).toString(),
+    // })
+    //   .then(() => {
+    //     resetData();
+    //     $modal2.removeClass("active");
+    //     $modal3.removeClass("active");
+    //     $modal.addClass("active");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    //
+    $.post(
+      "https://submit-form.com/N6QEhVAT",
+      {
+        Info: new URLSearchParams(formData).toString(),
+      },
+      null,
+      "json" // dataType must be set to json
+    )
+      .then(function () {
         resetData();
         $modal2.removeClass("active");
         $modal3.removeClass("active");
         $modal.addClass("active");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(function (response) {
+        console.error(response);
       });
   });
 
