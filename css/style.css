@@ -691,6 +691,10 @@ body {
   max-width: 115rem;
   margin: 0 auto;
 }
+.center-2 {
+  max-width: 90rem;
+  margin: 0 auto;
+}
 .center::after {
   content: "";
   display: table;
@@ -851,24 +855,29 @@ body {
 }
 
 .para-2 {
-  margin-top: 4rem;
-  font-size: 1.9rem;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 3.2rem;
+  /* line-height: 3.2rem; */
   text-align: center;
 }
 
 .section-4 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footers {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  /* justify-content: flex-end; */
   align-items: center;
-  gap: 6rem;
+  gap: 3rem;
+  flex-grow: 1;
 }
 
 .footers-item {
@@ -880,10 +889,16 @@ body {
   color: #5878bc;
   font-weight: 500;
   cursor: pointer;
+
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 
 .tt {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
+  padding: 10px;
+  color: black;
 }
 
 .wallet-item {
@@ -896,11 +911,16 @@ body {
 }
 
 .head-4 {
-  color: #3b99fc;
-  font-size: 2rem;
+  color: #000;
+  font-size: 1.5rem;
   line-height: 2.8rem;
   margin-top: 1rem;
   text-transform: capitalize;
+  transition: 0.4s;
+}
+
+.head-4:hover {
+  color: #3b99fc;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -912,16 +932,18 @@ body {
 .gridd {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem 2rem;
+  grid-gap: 7rem 2rem;
 }
 @media only screen and (max-width: 56.25em) {
   .gridd {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem 2rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .gridd {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem 2rem;
   }
 }
 @media only screen and (max-width: 28.75em) {
@@ -1437,6 +1459,7 @@ input#walletname {
   padding: 2rem;
   cursor: pointer;
   font-size: 1.5rem;
+  position: relative;
 }
 
 .ni-dist-cards {
@@ -2023,3 +2046,194 @@ input#walletname {
   font-weight: 300;
 }
 
+/* New Index page */
+.ni-body {
+  background-color: #0c0e29;
+}
+
+.ni-heading {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.ni-sub-heading {
+  line-height: 2rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.ni-top-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .ni-top-links {
+    flex-direction: column;
+  }
+}
+
+.ni-top-links__link {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+
+  border-radius: 7px;
+  color: #fff;
+  background-color: #1a1c34;
+  box-shadow: 0 0 0.2 black;
+  border-left: 0.4rem solid #3182ce;
+  text-decoration: none;
+}
+
+.ni-cards-heading {
+  font-weight: 800;
+  color: #3182ce;
+  font-size: 1.7rem;
+}
+
+.ni-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+@media only screen and (max-width: 780px) {
+  .ni-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .ni-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.ni-card-link {
+  text-decoration: none;
+}
+
+.ni-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #1a1c34;
+  box-shadow: 0 0 0.2rem black;
+  border-left: 0.7rem solid #3182ce;
+  border-radius: 0.5rem;
+  color: #fff;
+  padding: 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.ni-dist-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .ni-dist-cards {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.ni-dist-card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ni-dist-card__heading {
+  color: #fff;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+.ni-dist-card__sub-heading {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.ni-footer-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.ni-footer-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.ni-footer-button {
+  border-radius: 0.4rem;
+  text-decoration: none;
+  background-color: #0150b8;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  display: inline-block;
+  /* margin-left: auto; */
+}
+
+/* New Abim ******************************* */
+.nag-heading {
+  color: #3182ce;
+  font-size: 1.3rem;
+  padding: 3rem;
+}
+
+.redirect {
+  color: #ffffff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 11px;
+}
+
+.nag-footer-section {
+  /* background-color: red; */
+  margin-top: 80px;
+  border-top: 1px solid #c7c7c74d;
+}
+
+.nag-top-nav {
+  padding-block: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nag-top-nav-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nag-nav-link {
+  background-color: dodgerblue;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.nag-p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
